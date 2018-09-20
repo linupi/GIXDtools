@@ -1,9 +1,7 @@
 # GIXDtools
 Tools to analyze grazing incidence x-ray diffraction data.
 
-<div class="alert alert-success">
-The code published here is not yet in a state where it can be easily used by other scientist. I am aware that it is lacking a lot of documentation and tutorials how to use it. The main reason to publish this code is to complete the publications in which it has been used. Please feel welcome to contact me via email ( linus . pithan {AT} esrf .fr ) in case these software tools could be interesting for you. 
-</div>
+> :exclamation: The code published here is not yet in a state where it can be easily used by other scientist. I am aware that it is lacking a lot of documentation and tutorials how to use it. The main reason to publish this code is to complete the publications in which it has been used. Please feel welcome to contact me via email ( linus . pithan {AT} esrf .fr ) in case these software tools could be interesting for you. 
 
 <aside class="notice">
 Publications that I am aware of where the here presented tools have been used:
