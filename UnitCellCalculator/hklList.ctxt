@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=hklList
+comment0.text=\n\ Write\ a\ description\ of\ class\ hklList\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=hklList()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ hklList\n
+comment2.params=myhkl
+comment2.target=void\ add(hkl)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment3.params=i
+comment3.target=hkl\ get(int)
+comment4.params=
+comment4.target=int\ getSize()
+numComments=5

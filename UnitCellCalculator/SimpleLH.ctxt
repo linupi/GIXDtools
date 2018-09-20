@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=SimpleLH
+comment0.text=\n\ Simple\ algorithm\ to\ generate\ Latin-hypercube\ sampling\ \n\ \ \n\ @author\ Le\ Minh\ Nghia,\ NTU-Singapore\ \n\ \ \n
+comment1.params=samplesize\ dim
+comment1.target=SimpleLH(int,\ int)
+comment2.params=samplesize\ dim
+comment2.target=int[][]\ createSimpleLH(int,\ int)
+comment3.params=
+comment3.target=void\ ausgeben()
+comment4.params=row\ col
+comment4.target=int\ getElement(int,\ int)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+comment5.text=\n\ @param\ args\ \n
+numComments=6

@@ -1,0 +1,24 @@
+# Comment: 
+# ****************
+mask=example_data.png
+minHit=6
+hitDiv=128
+# ****************
+aMin=9.16
+aMax=9.21
+Na=500000
+bMin=4.8
+bMax=4.82
+Nb=500000
+cMin=21.25
+cMax=21.5
+Nc=500000
+alphaMin=87.05
+alphaMax=87.5
+Nalpha=500000
+betaMin=105.9
+betaMax=106.35
+Nbeta=500000
+gammaMin=66.65
+gammaMax=67
+Ngamma=500000

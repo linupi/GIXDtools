@@ -1,0 +1,129 @@
+import java.lang.Math;
+import Jama.*; 
+/**
+ * Write a description of class UnitCell here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class UnitCell
+{
+    // instance variables - replace the example below with your own
+    public double a;
+    public double b;
+    public double c;
+    public double alpha;
+    public double beta;
+    public double gamma;
+    private Matrix UB;
+
+    /**
+     * Constructor for objects of class UnitCell
+     */
+    public UnitCell(double a, double b, double c, double alpha, double beta, double gamma)
+    {
+        // initialise instance variables
+        this.a=a;
+        this.b=b;
+        this.c=c;
+        this.alpha=alpha;
+        this.beta=beta;
+        this.gamma=gamma;
+        
+     
+    }
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public double[] calcQ(hkl myhkl)
+    {
+        // put your code here
+        
+        //double cosalpha=Math.cos(Math.toRadians(alpha));
+        //double sinalpha=Math.sin(Math.toRadians(alpha));
+        //double cosbeta=Math.cos(Math.toRadians(beta));
+        //double sinbeta=Math.sin(Math.toRadians(beta));
+       // double cosgamma=Math.cos(Math.PI-Math.toRadians(gamma));
+        //double singamma=Math.sin(Math.PI-Math.toRadians(gamma));
+        //return 2.0*Math.PI*Math.sqrt(Math.pow((double)myhkl.h/a,2)+Math.pow(-(double)myhkl.h/a*cosgamma/singamma-(double)myhkl.k/b/singamma,2));
+       UB=calcUB();
+       double[][] hkl2D={{myhkl.h},{myhkl.k},{myhkl.l}};
+       double[][] res=(UB.times(new Matrix(hkl2D))).getArray();
+       double[] res2={Math.PI*2*res[0][0],Math.PI*2*res[1][0],Math.PI*2*res[2][0]};
+       return res2;
+       
+    }
+    
+ //   public double calcQperp(hkl myhkl)
+  //  {
+        // put your code here
+        
+   //     double cosalpha=Math.cos(Math.toRadians(alpha));
+        //double sinalpha=Math.sin(Math.toRadians(alpha));
+     //   double cosbeta=Math.cos(Math.toRadians(beta));
+        //double sinbeta=Math.sin(Math.toRadians(beta));
+       // double cosgamma=Math.cos(Math.PI-Math.toRadians(gamma));
+       // double singamma=Math.sin(Math.PI-Math.toRadians(gamma));
+        
+       // return 2.0*Math.PI*((double)myhkl.h/a*(cosgamma*(cosalpha-cosbeta*cosgamma)/(singamma)-singamma*cosgamma)+(double)myhkl.k/b*(cosalpha-cosbeta*cosgamma)/singamma+(double)myhkl.l/c*singamma)/Math.sqrt(1.0-cosbeta*cosbeta-cosgamma*cosgamma+2*cosalpha*cosbeta*cosgamma);
+    //}
+    
+    private Matrix calcUB()
+    {
+        double a1 = a ;
+        double a2 = b;
+        double a3 = c ; 
+        double alpha1 = Math.toRadians(alpha) ;
+        double alpha2 = Math.toRadians(beta) ;
+        double alpha3 = Math.toRadians(gamma) ;
+        
+        double[][] Gd = {{a1*a1, a1*a2*Math.cos(alpha3), a1*a3*Math.cos(alpha2)},
+        {a1*a2*Math.cos(alpha3), a2*a2, a2*a3*Math.cos(alpha1)},
+        {a1*a3*Math.cos(alpha2), a2*a3*Math.cos(alpha1), a3*a3}};
+        
+        Matrix G = new Matrix(Gd);
+        //G.print(8,3);
+        Matrix Ginv = G.inverse();
+        //Ginv.print(8,3);
+        
+        double b1=Math.sqrt(Ginv.get(0,0) );
+        double b2=Math.sqrt(Ginv.get(1,1) );
+        double b3=Math.sqrt(Ginv.get(2,2) );
+        double beta3=Math.acos(Ginv.get(0,1)/Math.sqrt(Ginv.get(0,0)*Ginv.get(1,1)));
+        double beta2=Math.acos(Ginv.get(0,2)/Math.sqrt(Ginv.get(0,0)*Ginv.get(2,2)));
+        double beta1=Math.acos(Ginv.get(1,2)/Math.sqrt(Ginv.get(1,1)*Ginv.get(2,2)));
+        double[][] Bd={{b1,b2*Math.cos(beta3),b3*Math.cos(beta2)},{0,b2*Math.sin(beta3 ),-b3*Math.sin(beta2)*Math.cos(alpha1)},
+        {0,0,1/a3}};
+        
+        Matrix B = new Matrix(Bd);
+        //B.print(12,6);
+        
+        double[][] he={{0},{0},{1}};
+        Matrix help=B.times(new Matrix(he));
+        //help.print(12,6);
+        
+        double rotUx = Math.acos(-help.get(2,0)/Math.sqrt(help.get(1,0)*help.get(1,0)+help.get(2,0)*help.get(2,0)));
+        double[][] Uxd = {{1, 0, 0}, {0, Math.cos(rotUx), -Math.sin(rotUx)}, {0, Math.sin(rotUx), Math.cos(rotUx)}};
+        Matrix Ux=new Matrix(Uxd);
+        //Ux.print(12,6);
+        help=Ux.times(help);
+        //help.print(12,6);
+        double rotUy = Math.acos(help.get(2,0)/Math.sqrt(help.get(0,0)*help.get(0,0)+help.get(2,0)*help.get(2,0)));
+        //System.out.println(rotUy);
+        double[][] Uyd = {{Math.cos(rotUy), 0, -Math.sin(rotUy)}, {0, 1, 0}, {Math.sin(rotUy), 0, Math.cos(rotUy)}};
+        Matrix Uy = new Matrix(Uyd);
+        //Uy.print(12,6);
+        help=Uy.times(help);
+        //help.print(12,6);
+        Matrix U =Uy.times(Ux);
+        //U.print(12,6);
+        Matrix UB=U.times(B);
+        //UB.print(12,6);
+        
+        return UB;
+    }
+}

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Mask
+comment0.text=\n\ Write\ a\ description\ of\ class\ Mask\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Mask()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Mask\n
+comment2.params=myMask
+comment2.target=Mask(java.lang.String)
+comment3.params=qpara\ qperp
+comment3.target=int\ getXpx(double,\ double)
+comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment4.params=qpara\ qperp
+comment4.target=int\ getYpx(double,\ double)
+comment5.params=qpara\ qperp
+comment5.target=double\ getMaskValue(double,\ double)
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7

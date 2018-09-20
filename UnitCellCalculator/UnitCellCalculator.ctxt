@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=UnitCellCalculator
+comment0.text=\n\ Write\ a\ description\ of\ class\ UnitCellCalculator\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=myUnitCellList\ myhklList
+comment1.target=UnitCellCalculator(UnitCellList,\ hklList)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ UnitCellCalculator\n
+comment10.params=args
+comment10.target=void\ main(java.lang.String[])
+comment10.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment2.params=
+comment2.target=void\ unitCellCalculatorDemo()
+comment3.params=configFile
+comment3.target=UnitCellCalculator(java.lang.String)
+comment4.params=configFile
+comment4.target=void\ init(java.lang.String)
+comment5.params=
+comment5.target=void\ run()
+comment6.params=
+comment6.target=void\ finish()
+comment7.params=u\ i\ sum
+comment7.target=void\ saveUnitCellList(UnitCell,\ long,\ int)
+comment8.params=u\ i\ sum
+comment8.target=void\ saveUnitCell(UnitCell,\ long,\ int)
+comment9.params=i\ sum
+comment9.target=void\ saveQ(long,\ int)
+numComments=11

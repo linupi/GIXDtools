@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=UnitCellList
+comment0.text=\n\ Write\ a\ description\ of\ class\ UnitCellList\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=UnitCellList()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ UnitCellList\n
+comment2.params=cellFileReader\ statusWriter
+comment2.target=UnitCellList(java.io.BufferedReader,\ java.io.PrintWriter)
+comment2.text=\n\ \ \ \ public\ void\ addRange1(double\ aMin,double\ aMax,\ int\ Na,double\ bMin,double\ bMax,\ int\ Nb,double\ cMin,double\ cMax,\ int\ Nc,double\ alphaMin,double\ alphaMax,\ int\ Nalpha,double\ betaMin,double\ betaMax,\ int\ Nbeta,double\ gammaMin,double\ gammaMax,\ int\ Ngamma)\n\ \ \ \ {\n\ \ \ \ \ \ \ \ //\ put\ your\ code\ here\n\ \ \ \ \ \ \ \ for(int\ ia\=0;ia<Na;ia++)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ double\ a\=(aMax-aMin)/Na*ia+aMin;\n\ \ \ \ \ \ \ \ \ \ \ \ for(int\ ib\=0;ib<Nb;ib++)\n\ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ double\ b\=(bMax-bMin)/Nb*ib+bMin;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(int\ ic\=0;ic<Nc;ic++)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ double\ c\=(cMax-cMin)/Nc*ic+cMin;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(int\ ialpha\=0;ialpha<Nalpha;ialpha++)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ double\ alpha\=(alphaMax-alphaMin)/Nalpha*ialpha+alphaMin;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(int\ ibeta\=0;ibeta<Nbeta;ibeta++)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ double\ beta\=(betaMax-betaMin)/Nbeta*ibeta+betaMin;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(int\ igamma\=0;igamma<Ngamma;igamma++)\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ double\ gamma\=(gammaMax-gammaMin)/Ngamma*igamma+gammaMin;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ add(new\ UnitCell(a\ ,\ b\ ,\ c,\ alpha\ ,\ beta\ ,\ gamma));\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
+comment3.params=aMin\ aMax\ Na\ bMin\ bMax\ Nb\ cMin\ cMax\ Nc\ alphaMin\ alphaMax\ Nalpha\ betaMin\ betaMax\ Nbeta\ gammaMin\ gammaMax\ Ngamma
+comment3.target=void\ addRange(double,\ double,\ int,\ double,\ double,\ int,\ double,\ double,\ int,\ double,\ double,\ int,\ double,\ double,\ int,\ double,\ double,\ int)
+comment4.params=i
+comment4.target=void\ remove(int)
+comment5.params=u
+comment5.target=void\ add(UnitCell)
+comment6.params=i
+comment6.target=UnitCell\ get(int)
+comment7.params=
+comment7.target=int\ getSize()
+numComments=8

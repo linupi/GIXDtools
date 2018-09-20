@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=UnitCell
+comment0.text=\n\ Write\ a\ description\ of\ class\ UnitCell\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=a\ b\ c\ alpha\ beta\ gamma
+comment1.target=UnitCell(double,\ double,\ double,\ double,\ double,\ double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ UnitCell\n
+comment2.params=
+comment2.target=void\ ausgeben()
+comment3.params=myhkl
+comment3.target=double[]\ calcQ(hkl)
+comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+numComments=4

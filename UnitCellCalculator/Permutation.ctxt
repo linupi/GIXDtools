@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Permutation
+comment0.text=\n\ Class\ to\ create\ random\ permutation\ (for\ shuffling)\ \n\ @author\ Le\ Minh\ Nghia,\ NTU-Singapore\ \n\ \n
+comment1.params=N
+comment1.target=int[]\ getPerm(int)
+comment1.text=\n\ Get\ permutation\ from\ 1\:N\ \n\ fuer\ uns\ besser\ permutation\ from\ 0\:N-1\n\ @param\ N\ \n\ @return\ Array\ of\ permutated\ indices\ from\ 1\ to\ N\ \n
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment2.text=\n\ @param\ args\ \n
+numComments=3
